@@ -273,42 +273,89 @@ hr {
 
 /* ABOUT */
 
-.about {
+.card {
   margin-top: 80px;
   display: flex;
   justify-content: space-between;
 }
 
-.about-item {
+.card-item {
   width: 30%;
   position: relative;
 
   background-color: #95e1d3;
 }
 
-.about-item:hover .about-img img {
-  opacity: 0.1;
+.card-item:hover .card-img img {
+  opacity: 0.4;
 }
 
-.about-item:hover .about-img {
-  transform: translate3d(-10px, -10px, 0);
+
+.card-item:hover .card-img.vitaliy {
+  position: relative;
+  animation: rotate 4s linear ;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
+@keyframes rotate{
+  0%{
+    transform: rotate3d(0, 1, 0, 0deg) scale(1) translateY(0);
+    background: linear-gradient(to top, black, gold);
+    border: none;
+  }
+  50%{
+    background: linear-gradient(to top, grey, gold);
+    border: 3px solid black;
+    padding: 5px;
+   
+
+  }
+  100%{
+    transform: rotate3d(0, 1, 0, 360deg) scale(1.4) translateY(-50%);
+    background: linear-gradient(to top, white, gold);
+    border: 3px solid black;
+    padding: 10px;
+  }
+}
+.card-item:hover .card-text.vit{
+  animation: opac 4s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes opac{
+  0%{
+    transform: rotate3d(0, 1, 0, 0deg) scale(1) translateY(0);
+    top: 0px;
+    opacity: 0;
+  }
+  100%{
+    transform: rotate3d(0, 1, 0, 360deg) scale(1.4) translateY(-50%);
+    top: -100px;
+    opacity: 1;
+  }
 }
 
-.about-item:hover .about-text {
+
+.card-item:hover .card-img {
+  transform: translate3d(-10px, -10px, 0px);
+}
+
+.card-item:hover .card-text {
   opacity: 1;
 }
-.about-img img {
+.card-img img {
   display: block;
   transition: opacity 0.1s linear;
-  width: 100%; /* моя вставка */
+  width: 100%; /*моя вставка */
+  
 }
-.about-img {
+.card-img {
   background: linear-gradient(to bottom, #f38181, #fce38a);
 
   transition: transform 0.2s linear;
+  
 }
 
-.about-text {
+.card-text {
   width: 100%;
 
   font-size: 18px;
@@ -532,18 +579,17 @@ hr {
   background-color: #f38181;
 }
 
-.reviews-btn{
+.reviews-btn {
   font-size: 0;
-  color:transparent;
+  color: transparent;
 
   position: absolute;
   top: 50%;
   z-index: 1;
   transform: translateY(-50%);
-
 }
 
-.reviews-btn::after{
+.reviews-btn::after {
   content: "";
   display: block;
   width: 16px;
@@ -551,16 +597,25 @@ hr {
 
   border-top: 2px solid #ccc;
   border-left: 2px solid #ccc;
-
- 
 }
 
-.reviews-btn--prev{
+.reviews-btn--prev {
   left: 0;
-  transform:  rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
-.reviews-btn--next{
+.reviews-btn--next {
   right: 0;
-  transform:  rotate(135deg);
+  transform: rotate(135deg);
 }
+
+.card-img-team{
+  height: 100px;
+  width: 100px;
+
+
+}
+
+
+
+
