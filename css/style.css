@@ -281,59 +281,17 @@ hr {
 
 .card-item {
   width: 30%;
-  position: relative;
+  
+}
 
+.card-inner {
+  position: relative;
   background-color: #95e1d3;
 }
 
 .card-item:hover .card-img img {
   opacity: 0.4;
 }
-
-
-.card-item:hover .card-img.vitaliy {
-  position: relative;
-  animation: rotate 4s linear ;
-  animation-fill-mode: forwards;
-  z-index: 2;
-}
-@keyframes rotate{
-  0%{
-    transform: rotate3d(0, 1, 0, 0deg) scale(1) translateY(0);
-    background: linear-gradient(to top, black, gold);
-    border: none;
-  }
-  50%{
-    background: linear-gradient(to top, grey, gold);
-    border: 3px solid black;
-    padding: 5px;
-   
-
-  }
-  100%{
-    transform: rotate3d(0, 1, 0, 360deg) scale(1.4) translateY(-50%);
-    background: linear-gradient(to top, white, gold);
-    border: 3px solid black;
-    padding: 10px;
-  }
-}
-.card-item:hover .card-text.vit{
-  animation: opac 4s linear;
-  animation-fill-mode: forwards;
-}
-@keyframes opac{
-  0%{
-    transform: rotate3d(0, 1, 0, 0deg) scale(1) translateY(0);
-    top: 0px;
-    opacity: 0;
-  }
-  100%{
-    transform: rotate3d(0, 1, 0, 360deg) scale(1.4) translateY(-50%);
-    top: -100px;
-    opacity: 1;
-  }
-}
-
 
 .card-item:hover .card-img {
   transform: translate3d(-10px, -10px, 0px);
@@ -346,13 +304,11 @@ hr {
   display: block;
   transition: opacity 0.1s linear;
   width: 100%; /*моя вставка */
-  
 }
 .card-img {
   background: linear-gradient(to bottom, #f38181, #fce38a);
 
   transition: transform 0.2s linear;
-  
 }
 
 .card-text {
@@ -371,6 +327,22 @@ hr {
   transform: translate3d(0, -50%, 0);
 
   transition: opacity 0.2s linear;
+}
+
+.card-info {
+  margin-top: 20px;
+  text-align: center;
+}
+.card-name {
+  text-transform: uppercase;
+  color: #333;
+  font-size: 14px;
+}
+.card-prof {
+  color: #999;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 15px;
 }
 
 /* STATISTICS */
@@ -609,13 +581,169 @@ hr {
   transform: rotate(135deg);
 }
 
-.card-img-team{
+.card-img-team {
   height: 100px;
   width: 100px;
-
-
 }
 
+/* SOCIAL */
+.social {
+  display: flex;
+  justify-content: center;
+}
+.social-item {
+  width: 55px;
+  height: 55px;
 
+  padding: 12px 0;
+  background-color: #fce38a;
+  border: 1px solid #f38181;
 
+  text-decoration: none;
+  color: #f38181;
+  font-size: 35px;
+  line-height: 1;
 
+  transition: background 0.1s linear, color 0.1s linear, scale 0.2s linear;
+}
+
+.social-item:last-child {
+  border-right: 0;
+}
+
+.social-item:hover {
+  background-color: #f38181;
+  color: #fff;
+  scale: 1.2;
+}
+
+/* LOGOS */
+.logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* WORKS */
+
+.works {
+  display: flex;
+}
+.works-col {
+  flex: 1 1 0;
+}
+
+.works-item{
+  position: relative;
+
+  background: linear-gradient(to bottom, #f38181, #fce38a);
+}
+
+.works-item:hover .works-image{
+  opacity: 0.1;
+}
+
+.works-item:hover .works-info{
+  opacity: 1;
+}
+.works-image{
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  height: auto;
+  
+  transition: opacity .2s linear;
+}
+
+.works-info{
+  width: 100%;
+  padding: 10px;
+
+  color: white;
+  text-align: center;
+  opacity: 0;
+
+  position: absolute;
+  top:50%;
+  left: 0;
+  z-index: 1;
+
+  transform: translate3d(0, -50%,0);
+  transition: opacity .2s linear;
+}
+
+.works-title{
+  color:white;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.works-text{
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* ANIMATION VITALY*/
+
+.card-item:hover .card-img.vitaliy {
+  position: relative;
+  animation: rotate 2s linear;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg) scale(1) translateY(0);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg) scale(1.2) translateY(-50%);
+  }
+}
+.card-item:hover .card-text.vit {
+  animation: opac 2s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes opac {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg) scale(1) translateY(0);
+    top: 0px;
+    opacity: 0;
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg) scale(1.2) translateY(-50%);
+    top: -100px;
+    opacity: 1;
+  }
+}
+
+.border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  border: 2px solid black; /* Устанавливаем прозрачную границу */
+}
+
+.card-item:hover .border {
+  animation: border 2s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes border {
+  0% {
+    border: 0px solid black;
+    margin: 0;
+    background: linear-gradient(to top, #ffc801, #f38181);
+  }
+  50% {
+    background: linear-gradient(to top, #fed542, #f38181);
+  }
+  100% {
+    border: 3px solid black;
+    margin: -10px;
+    background: linear-gradient(to top, #fce38a, #f38181);
+  }
+}
