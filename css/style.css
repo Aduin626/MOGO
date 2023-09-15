@@ -886,15 +886,15 @@ hr {
   justify-content: space-between;
 }
 
-.footer-col--first{
+.footer-col--first {
   width: 40%;
 }
 
-.footer-col--second{
+.footer-col--second {
   width: 29%;
 }
 
-.footer-col--third{
+.footer-col--third {
   width: 22%;
 }
 
@@ -945,8 +945,7 @@ hr {
   font-size: 18px;
 }
 
-
-.footer-title{
+.footer-title {
   text-transform: uppercase;
   font-size: 14px;
   color: #333;
@@ -954,33 +953,33 @@ hr {
   margin: 30px 0;
 }
 
-
 /* BLOGS */
 
-.blogs-item{
+.blogs-item {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
-
 }
 
-.blogs-content{
-  padding-left: 20px ;
+.blogs-content {
+  padding-left: 20px;
 }
 
-.blogs-title{
-  color:#333;
+.blogs-title {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
   font-size: 12px;
-  line-height: 1.2;
-  text-transform: uppercase ;
+  line-height: 1.5;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
-.blogs-title:hover{
+.blogs-title:hover {
   text-decoration: underline;
 }
 
-.blogs-date{
+.blogs-date {
   font-size: 13px;
   color: #999;
   font-style: italic;
@@ -1011,13 +1010,13 @@ hr {
   font-family: "Montserrat", sans-serif;
 }
 
-.subscribe-input::placeholder{
-  color:#ccc;
+.subscribe-input::placeholder {
+  color: #ccc;
 }
 
-.subscribe-input:focus{
+.subscribe-input:focus {
   outline: 0;
-  border-color:#95e1d3;
+  border-color: #95e1d3;
 }
 
 .subscribe-btn {
@@ -1035,16 +1034,47 @@ hr {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
 
-  transition: background .2s linear;
+  transition: background 0.2s linear;
 }
 
-.subscribe-btn:hover{
+.subscribe-btn:hover {
   background-color: #74c7b8;
 }
 
-.subscribe-btn:focus{
+.subscribe-btn:focus {
   outline: 0;
 }
+
+/* INSTAGRAM */
+.instagram {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.instagram-item {
+  width: 32.3333%;
+  border: 1px solid #fff;
+}
+
+.instagram-item img {
+  display: block;
+}
+
+/* COPYRIGHT */
+.copyright {
+  padding: 20px 0;
+  border-top: 1px solid #e5e5e5;
+
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.copyright span {
+  color: #f38181;
+}
+
 /* ANIMATION VITALY*/
 
 .card-item:hover .card-img.vitaliy {
